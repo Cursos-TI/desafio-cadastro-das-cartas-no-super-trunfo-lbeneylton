@@ -29,16 +29,13 @@ int main() {
     fgets(cidade, 50, stdin);
 
     printf("Digite o tamanho da população\n");
-    scanf("%i",&populacao);
+    scanf("%s", &populacao);
 
     printf("Digite a area da cidade\n");
     scanf("%f", &area);
 
-    printf("Digite o PIB da cidade\n");
-    scanf("%f", &PIB);
 
-    printf("Digite quantos pontos turistifcos tem a cidade\n");
-    scanf("%i", &pontos_turisticos);
+  
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
