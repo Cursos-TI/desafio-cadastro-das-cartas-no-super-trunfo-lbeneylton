@@ -102,4 +102,6 @@ int main() {
     printf("Densidade Populacional: %i\n", densidade_populacional < densidade_populacional2);
     printf("Super Poder: %i\n\n\n", Super > Super2);
 
+    
+
 }
