@@ -13,7 +13,7 @@ int main(){
     printf("\nEntre com a terceira nota do aluno\n");
     scanf(" %lf", &nota3);
 
-    media = (nota1 + nota2 + nota3);
+    media = (nota1 + nota2 + nota3)/3;
     printf("A  média do aluno é %.2lf\n\n", media);
 
     return 0;
