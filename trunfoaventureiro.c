@@ -11,7 +11,7 @@ int main() {
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     char estado[50], estado2[50], codigo[4], codigo2[4], cidade[50], cidade2[50];
     int populacao, populacao2, pontos_turisticos, pontos_turisticos2;
-    double area, area2, PIB, PIB2, densidade_populacional, densidade_populacional2, PIBperC, PIBperC2, Super, Super2;
+    double area, area2, PIB, PIB2, densidade_populacional, densidade_populacional2, PIBperC, PIBperC2;;
 
     // Cadastro das Cartas:
     // Carta 1
@@ -40,9 +40,6 @@ int main() {
     PIBperC = PIB/populacao;
     densidade_populacional = populacao/area;
 
-    
-    //Calculo do super carta 1
-    Super = populacao + area + PIB + pontos_turisticos + PIBperC + (1/densidade_populacional);
 
     printf("\n\n*** CADASTRO DA SEGUNDA CARTA ***\n\n");
 
@@ -71,9 +68,6 @@ int main() {
     //Dados que são calculados da carta 2
     PIBperC2 = PIB2/populacao2;
     densidade_populacional2 = populacao2/area2;
-    
-    //Calculo do super carta 1
-    Super2 = populacao2 + area2 + PIB2 + pontos_turisticos2 + PIBperC2 + (1/densidade_populacional2);
 
     
     // Exibição dos Dados das Cartas:
@@ -82,24 +76,13 @@ int main() {
     printf("Carta 1:\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\n", estado, codigo, cidade);
     printf("População: %i Habitantes\nÁrea: %.2lf Km²\nPIB: %.2lf Bilhões de Reais\n",populacao, area, PIB);
     printf("Quantidade de Pontos Turisticos: %i \n", pontos_turisticos);
-    printf("Densidade Populacional: %.2lf hab/Km²\nPIB per Capita: R$ %.2lf por habitante\n", densidade_populacional, PIBperC);
-    printf("Super carta 1: %.2lf\n\n\n", Super);
+    printf("Densidade Populacional: %.2lf\nPIB per Capita: %.2lf\n\n\n\n", densidade_populacional, PIBperC);
 
 
     printf("Carta 2:\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\n", estado2, codigo2, cidade2);
     printf("População: %i Habitantes\nÁrea: %.2lf Km²\nPIB: %.2lf Bilhões de Reais\n",populacao2, area2, PIB2);
     printf("Quantidade de Pontos Turisticos: %i \n", pontos_turisticos2);
-    printf("Densidade Populacional: %.2lf hab/Km²\nPIB per Capita: R$ %.2lf por habitante\n", densidade_populacional2, PIBperC2);
-    printf("Super carta 2: %.2lf\n\n", Super2);
+    printf("Densidade Populacional: %.2lf\nPIB per Capita:%.2lf\n\n", densidade_populacional2, PIBperC2);
 
-    // Comparação das cartas
-    printf("***Comparação de cartas: ***\n\n");
-    printf("População: %i\n",populacao > populacao2);
-    printf("Area: %i\n", area > area2);
-    printf("PIB: %i\n", PIB > PIB2);
-    printf("Pontos Turisticos: %i\n", pontos_turisticos > pontos_turisticos2);
-    printf("PIB per Capita: %i\n", PIBperC > PIBperC2);
-    printf("Densidade Populacional: %i\n", densidade_populacional < densidade_populacional2);
-    printf("Super Poder: %i\n\n\n", Super > Super2);
 
 }
