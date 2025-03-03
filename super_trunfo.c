@@ -75,11 +75,14 @@ int main() {
 
     printf("Carta 1:\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\n", estado, codigo, cidade);
     printf("População: %i Habitantes\nÁrea: %.2lf Km²\nPIB: %.2lf Bilhões de Reais\n",populacao, area, PIB);
-    printf("Quantidade de Pontos Turisticos: %i \n\n\n\n", pontos_turisticos);
+    printf("Quantidade de Pontos Turisticos: %i \n", pontos_turisticos);
+    printf("Densidade Populacional: %.2lf\nPIB per Capita: %.2fl\n\n\n\n", densidade_populacional, PIBperC);
+
 
     printf("Carta 2:\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\n", estado2, codigo2, cidade2);
     printf("População: %i Habitantes\nÁrea: %.2lf Km²\nPIB: %.2lf Bilhões de Reais\n",populacao2, area2, PIB2);
-    printf("Quantidade de Pontos Turisticos: %i", pontos_turisticos2);
+    printf("Quantidade de Pontos Turisticos: %i \n", pontos_turisticos2);
+    printf("Densidade Populacional: %.2lf\nPIB per Capita:%.2lf\n\n", densidade_populacional2, PIBperC2);
 
 
 }
