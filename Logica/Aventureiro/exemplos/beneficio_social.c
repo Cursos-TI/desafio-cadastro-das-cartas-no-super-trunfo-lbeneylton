@@ -8,7 +8,6 @@ com base em vários critérios: idade, renda e número de dependentes.
 renda < 3000
 dependetes > 2
 
-
 */
 
 int main(){
@@ -28,14 +27,17 @@ int main(){
     printf("\n\n");
     if( idade>= 18 && idade <= 65){
         if (renda < 3000){
-            /* code */
+            if (dependentes > 2){
+                printf("Você atende aos requisitos para o beneficio");
+            }else{
+                printf("Você não atende aos requisitos de dependentes para o beneficio");
+            }
+
         }else
         {
-            /* code */
+            printf("Você não está qualificado para o beneficio social deviddo asua renda");
         }
         
-                
-
     }else{
         printf("Você não está qualificado para o beneficio devido a sua idade");
     }
