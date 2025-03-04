@@ -2,13 +2,10 @@
 #include <stdlib.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    //Definição das variáveis para cada atributo das cidades.
+
     char estado[50], estado2[50], codigo[4], codigo2[4], cidade[50], cidade2[50];
     int populacao, populacao2, pontos_turisticos, pontos_turisticos2;
     double area, area2, PIB, PIB2, densidade_populacional, densidade_populacional2, PIBperC, PIBperC2, Super, Super2;
@@ -72,7 +69,7 @@ int main() {
     PIBperC2 = PIB2/populacao2;
     densidade_populacional2 = populacao2/area2;
     
-    //Calculo do super carta 1
+    //Calculo do super carta 2
     Super2 = populacao2 + area2 + PIB2 + pontos_turisticos2 + PIBperC2 + (1/densidade_populacional2);
 
     
@@ -93,15 +90,109 @@ int main() {
     printf("Super carta 2: %.2lf\n\n", Super2);
 
     // Comparação das cartas
-    printf("***Comparação de cartas: ***\n\n");
-    printf("População: %i\n",populacao > populacao2);
-    printf("Area: %i\n", area > area2);
-    printf("PIB: %i\n", PIB > PIB2);
-    printf("Pontos Turisticos: %i\n", pontos_turisticos > pontos_turisticos2);
-    printf("PIB per Capita: %i\n", PIBperC > PIBperC2);
-    printf("Densidade Populacional: %i\n", densidade_populacional < densidade_populacional2);
-    printf("Super Poder: %i\n\n\n", Super > Super2);
 
+    // Atributo escolhido: População
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: População)\n\n");
+    printf("Carta 1 - %s (%s): %i habitantes\n", cidade, estado, populacao);
+    printf("Carta 2 - %s (%s): %i habitantes\n", cidade2, estado2, populacao2);
+
+    if (populacao > populacao2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    }
+    printf("\n-----------------------------------------------------------------\n");
     
 
+    //Atributo escolhido: Área
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: Área)\n\n");
+    printf("Carta 1 - %s (%s): %.2lf km²\n", cidade, estado, area);
+    printf("Carta 2 - %s (%s): %.2lf km²\n", cidade2, estado2, area2);
+
+    if (area > area2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    }
+    printf("\n-----------------------------------------------------------------\n");
+       
+
+    //Atributo escolhido: PIB
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: PIB)\n\n");
+    printf("Carta 1 - %s (%s): R$ %.2lf \n", cidade, estado, PIB);
+    printf("Carta 2 - %s (%s): R$ %.2lf \n", cidade2, estado2, PIB2);
+
+    if (PIB > PIB2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    }
+    printf("\n-----------------------------------------------------------------\n");
+       
+
+    //Atributo escolhido: Densidade demografica
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: Densidade demografica)\n\n");
+    printf("Carta 1 - %s (%s): %.2lf hab/km²\n", cidade, estado, densidade_populacional);
+    printf("Carta 2 - %s (%s): %.2lf hab/km²\n", cidade2, estado2, densidade_populacional2);
+
+    if (densidade_populacional < densidade_populacional2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    }
+    printf("\n-----------------------------------------------------------------\n");
+
+    //Atributo escolhido: PIB per Capita
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: PIB per Capita)\n\n");
+    printf("Carta 1 - %s (%s): R$ %.2lf/hab \n", cidade, estado, PIBperC);
+    printf("Carta 2 - %s (%s): R$ %.2lf/hab \n", cidade2, estado2, PIBperC2);
+ 
+    if (PIBperC > PIBperC2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    }   
+    printf("\n-----------------------------------------------------------------\n");
+
+
+    //Atributo escolhido: Pontos Turisticos
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: Pontos Turisticos)\n\n");
+    printf("Carta 1 - %s (%s): %i\n", cidade, estado, pontos_turisticos);
+    printf("Carta 2 - %s (%s): %i\n", cidade2, estado2, pontos_turisticos2);
+
+    if (pontos_turisticos > pontos_turisticos2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    }    
+    printf("\n-----------------------------------------------------------------\n");
+
+
+    //Atributo escolhido: Super Poder
+    printf("\n\n\n");
+    printf("-----------------------------------------------------------------\n");
+    printf("Comparação de cartas (Atributo: Super Poder)\n\n");
+    printf("Carta 1 - %s (%s): %.2lf\n", cidade, estado, Super);
+    printf("Carta 2 - %s (%s): %.2lf\n", cidade2, estado2, Super2);
+
+    if (Super > Super2){
+        printf("Resultado: Carta 1 (%s) venceu!", cidade);
+    }else{
+        printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+    } 
+    printf("\n-----------------------------------------------------------------\n");
+    
+    printf("\n\n\n");
 }
