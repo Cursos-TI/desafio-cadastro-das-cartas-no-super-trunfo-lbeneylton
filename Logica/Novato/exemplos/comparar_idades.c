@@ -11,6 +11,8 @@ int main(){
     printf("\n\nDigite a idade da segunda pessoa\n");
     scanf(" %i", &idadeB);
 
+    printf("\n\n\n");
+
     //Comparação de idades
     if (idadeA > idadeB){
         printf("A primeira pessoa é mais velha");
@@ -19,6 +21,6 @@ int main(){
     }else{
         printf("A segunda pessoa é mais velha");
     }
-
+   
     printf("\n\n\n");
 }
