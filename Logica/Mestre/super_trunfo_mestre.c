@@ -63,9 +63,7 @@ int main() {
     printf("Densidade Populacional: %.2lf hab/Km²\nPIB per Capita: R$ %.2lf por habitante\n", densidade_populacional2, PIBperC2);
     printf("Super carta 2: %.2lf\n\n\n", Super2);
 
-    // Comparação das cartas
-
-
+    //Menu interativo
     int opcao;
     printf("Escolha um atributo para batalha:\n");
     printf("1. Nome da cidade\n");
