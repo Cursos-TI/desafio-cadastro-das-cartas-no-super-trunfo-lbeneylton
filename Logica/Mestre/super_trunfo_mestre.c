@@ -63,8 +63,10 @@ int main() {
     printf("Densidade Populacional: %.2lf hab/Km²\nPIB per Capita: R$ %.2lf por habitante\n", densidade_populacional2, PIBperC2);
     printf("Super carta 2: %.2lf\n\n\n", Super2);
 
-    //Menu interativo
-    int opcao;
+    // INICIO DO JOGO
+
+
+    int opcao1, opcao2;
     printf("Escolha um atributo para batalha:\n");
     printf("1. Nome da cidade\n");
     printf("2. População\n");
@@ -75,12 +77,12 @@ int main() {
     printf("7. Densidade Demografica\n");
     printf("8. Super Poder\n");
     printf("Escolha: \n");
-    scanf(" %i", &opcao);
+    scanf(" %i", &opcao1);
 
     printf("\n\n\n");
     printf("-----------------------------------------------------------------\n");
 
-    switch (opcao){
+    switch (opcao1){
         case 1:
             /* code */
         break;
@@ -91,13 +93,8 @@ int main() {
             printf("Carta 1 - %s (%s): %lu habitantes\n", cidade, estado, populacao);
             printf("Carta 2 - %s (%s): %lu habitantes\n", cidade2, estado2, populacao2);
 
-            if (populacao > populacao2){
-                printf("Resultado: Carta 1 (%s) venceu!", cidade);
-            }else if(populacao < populacao2){
-                printf("Resultado: Carta 2 (%s) venceu!", cidade2);
-            }else{
-                printf("Empate");
-            }
+            populacao > populacao2 ? printf("Resultado: Carta 1 (%s) venceu!", cidade): printf("Resultado: Carta 2 (%s) venceu!", cidade2);
+
         break;
 
         case 3:
@@ -193,6 +190,7 @@ int main() {
         default:
             printf("Opção Inválida");
     }
+   
     printf("\n-----------------------------------------------------------------\n");
     printf("\n\n\n");
  
