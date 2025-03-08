@@ -10,43 +10,61 @@ que o escolhido pelo computador
 
 int main(){
 
-    int num, escolha, numpc;
-    
+    int num, numpc, resultado;
+    char escolha;
     //Geração do número do pc
     srand(time(0));
     numpc = rand() %100 + 1;
 
-    printf("*** Jogo Maior, Menor ou Igual ***");
+    printf("*** Jogo Maior, Menor ou Igual ***\n\n");
     printf("Escolha um número de 1 e 100\n");
     scanf(" %i", &num);
     printf("\n\n\n");
     
     printf("Escolha a comparação\n");
-    printf("1. Maior\n");
-    printf("2. Menor\n");
-    printf("3. Igual\n");
+    printf("M. Maior\n");
+    printf("N. Menor\n");
+    printf("I. Igual\n");
     printf("Escolha: ");
-    scanf(" %i", &escolha);
+    scanf(" %c", &escolha);
     
 
     switch (escolha){
-    case 1:
-        num > numpc ? printf("Parabéns você ganhou pois seu número é maior ao do computador"): printf("Você perdeu");
+    case 'M':
+    case 'm':
+        printf("Você escolheu a opção MAIOR\n");
+        resultado = num > numpc ? 1 : 0;
+
     break;
 
-    case 2:
-        num < numpc ? printf("Parabéns você ganhou pois seu número é menor ao do computador"): printf("Você perdeu");
+    case 'N':
+    case 'n':
+        printf("Você escolheu a opção MENOR\n");
+        resultado = num < numpc ? 1 : 0;
+
     break;
 
-    case 3:
-        num == numpc ? printf("Parabéns você ganhou pois seu número é igual ao do computador"): printf("Você perdeu");
+    case 'I':
+    case 'i':
+        printf("Você escolheu a opção IGUAL\n");
+        resultado = num == numpc ? 1: 0;
+
     break;
     
     default:
         printf("Opção inválida");
     }
 
-    printf("Você escolheu %i\nO computador escolheu %i",num, numpc);
+    printf("Você escolheu %i\nO computador escolheu %i\n",num, numpc);
+    if (resultado == 1){
+        printf("Você ganhou\n");
+    }else
+    {
+        printf("Você perdeu\n");
+    }
+    
+    
+
     printf("\n\n\n");
 
 }
